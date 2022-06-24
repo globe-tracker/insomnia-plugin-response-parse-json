@@ -1,0 +1,17 @@
+{
+  "name": "insomnia-plugin-response-parse-json",
+  "author": {
+    "name": "Brian Bischoff",
+    "email": "bbischoff@gmail.com"
+  },
+  "version": "0.0.1",
+  "private": false,
+  "insomnia": {
+    "name": "response-parse-json",
+    "description": "Parse specific properties as JSON using jsonp selector"
+  },
+  "main": "main.js",
+  "dependencies": {
+    "jsonpath": "^1.1.1"
+  }
+}
