@@ -1,9 +1,6 @@
 {
   "name": "insomnia-plugin-response-parse-json",
-  "author": {
-    "name": "Brian Bischoff",
-    "email": "bbischoff@gmail.com"
-  },
+  "author": "Brian Bischoff <bbischoff@gmail.com>",
   "version": "0.0.1",
   "private": false,
   "insomnia": {
@@ -13,5 +10,15 @@
   "main": "main.js",
   "dependencies": {
     "jsonpath": "^1.1.1"
-  }
+  },
+  "description": "Parse specific properties as JSON using jsonp selector",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/globe-tracker/insomnia-plugin-response-parse-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/globe-tracker/insomnia-plugin-response-parse-json/issues"
+  },
+  "homepage": "https://github.com/globe-tracker/insomnia-plugin-response-parse-json#readme"
 }
