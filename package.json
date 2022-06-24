@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-response-parse-json",
-  "author": "Brian Bischoff <bbischoff@gmail.com>",
+  "author": "Brian Bischoff <brian@bischoff.fo>",
   "version": "0.0.1",
   "private": false,
   "insomnia": {
