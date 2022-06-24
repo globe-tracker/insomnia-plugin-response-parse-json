@@ -3,6 +3,7 @@
   "author": "Brian Bischoff <brian@bischoff.fo>",
   "version": "0.0.1",
   "private": false,
+  "license": "MIT",
   "insomnia": {
     "name": "response-parse-json",
     "description": "Parse specific properties as JSON using jsonp selector"

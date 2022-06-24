@@ -1,24 +1,22 @@
 var jp = require("jsonpath");
 module.exports.responseHooks = [
   (context) => {
-    const headerValue = context.request.getHeader(
-      "INSOMNIA-RESPONSE-JSON-PARSE"
-    );
+    const jsonPath = context.request.getHeader("INSOMNIA-RESPONSE-JSON-PARSE");
     let errors = 0;
-    if (headerValue) {
-      jsonPath = headerValue;
+    if (jsonPath) {
       let response = {};
       try {
         response = JSON.parse(context.response.getBody().toString());
       } catch (error) {
+        console.error("Error parsing response body", error);
         return;
       } finally {
         try {
           var values = jp
-            .query(response, headerValue)
+            .query(response, jsonPath)
             .map((value) => JSON.parse(value));
           var paths = jp
-            .paths(response, headerValue)
+            .paths(response, jsonPath)
             .map((path) => path.slice(1).join("."));
           var modVals = {};
           for (let index = 0; index < paths.length; index++) {
@@ -29,10 +27,15 @@ module.exports.responseHooks = [
           });
         } catch (error) {
           errors++;
+          console.error(error);
         }
       }
       if (errors == 0) {
         context.response.setBody(Buffer.from(JSON.stringify(response)));
+      } else {
+        console.error(
+          "Error in plugin response-json-parse, not modifying response"
+        );
       }
     }
   },
