@@ -1,6 +1,6 @@
 # insomnia-plugin-response-parse-json
 
-This is a plugin for Insomnia API client.
+This is a plugin for Insomnia API client that can parse specific properties as JSON using jsonp selector.
 
 ## Installation
 

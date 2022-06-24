@@ -13,6 +13,13 @@
     "jsonpath": "^1.1.1"
   },
   "description": "Parse specific properties as JSON using jsonp selector",
+  "keywords": [
+    "insomnia",
+    "plugin",
+    "response",
+    "parse",
+    "json"
+  ],
   "devDependencies": {},
   "repository": {
     "type": "git",
