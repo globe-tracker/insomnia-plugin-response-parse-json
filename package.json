@@ -1,7 +1,7 @@
 {
   "name": "insomnia-plugin-response-parse-json",
   "author": "Brian Bischoff <brian@bischoff.fo>",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "private": false,
   "license": "MIT",
   "insomnia": {
